@@ -3,6 +3,32 @@ Bowling Challenge
 =================
 
 
+**Rules**
+
+A game of bowling consists of **10** frames altogether.
+
+For each frame(turn)   * **frames 1 - 9** , a player can receives **two** attempts to knock down all ten of the pins
+For **frame 10** - the player has up to **three** attempts to knock down all 10 of the pins.
+
+A player scores a **strike** if they knock down **all 10** pins in one go (in the first frame).
+
+A player scores a **spare** if they knock down **all 10 pins** over 2 goes(across two frames)
+
+When a player achieves a **spare**, they are awarded **ten** points, plus a point for each of the pins they knock down 
+in their **first attempt** in the **next** frame.
+
+When a player achieves a **strike**, they are awarded ten points, plus a point for each of the pins they knock down
+across **BOTH** attempts in the **next frame**.
+
+A bowler plays a **gutter game** when the ball rolls into the gutters, resulting in a score of **0** and no pins knocked down.
+
+In the **tenth** frame, a player who achieves a strike or a spare will receive a **bonus** turn.
+If a player achieves a **strike** on the first attempt of frame ten, they will be entitled to **two** additional attempts.
+If a player achieves a **spare** over two attempts in the tenth frame, they will be entitled to **one** more attempt.
+If a player scores a **strike** or a **spare** on the third attempt, they will receive the points for pins
+knocked down. 
+
+
 * Challenge time: rest of the day and weekend.
 * Feel free to use google, your notes, books, etc. but work on your own
 * If you refer to the solution of another coach or student, please put a link to that in your README
