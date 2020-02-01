@@ -3,7 +3,7 @@ Bowling Challenge
 =================
 
 
-**Rules**
+##**Rules**##
 
 A game of bowling consists of **10** frames altogether.
 
@@ -90,7 +90,7 @@ User Story 9
 ```
 As a bowler,
 So I can celebrate or drown my sorrows,
-I would like to add the total numnber of points scored out of 300 across the ten frames and have them returned to me
+I would like to add the total number of points scored out of 300 across the ten frames and have them returned to me
 ```
 
 * Challenge time: rest of the day and weekend.
