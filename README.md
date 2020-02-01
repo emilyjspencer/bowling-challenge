@@ -7,7 +7,8 @@ Bowling Challenge
 
 A game of bowling consists of **10** frames altogether.
 
-For each frame(turn)   * **frames 1 - 9** , a player can receives **two** attempts to knock down all ten of the pins
+For each frame(turn)   * **frames 1 - 9** , a player can receive **two** attempts to knock down all ten of the pins.
+<br>
 For **frame 10** - the player has up to **three** attempts to knock down all 10 of the pins.
 
 A player scores a **strike** if they knock down **all 10** pins in one go (in the first frame).
@@ -28,6 +29,69 @@ If a player achieves a **spare** over two attempts in the tenth frame, they will
 If a player scores a **strike** or a **spare** on the third attempt, they will receive the points for pins
 knocked down. 
 
+User stories
+
+User Story 1:
+```
+As a player,
+So that I can keep track of my score,
+I would like to add the number of pins I've knocked down in each frame to a scorecard.
+```
+
+User Story 2:
+```
+As a player,
+So that I can calculate the score if I play a gutter game,
+I would like to add a score of 0 to a scorecard.
+```
+
+User Story 3:
+```
+As a player,
+So that I can feel good about my bowling abilities,
+I would like to add a score of 10 to a scorecard when I achieve a spare
+```
+
+User Story 4:
+```
+As a player,
+So I can feel even better about my bowling abilities,
+I would like to add a score of 10 to a scorecard when I achieve a strike
+```
+
+User Story 5:
+```
+As a player,
+So I can calculate the score correctly when I achieve a spare,
+I would like to add additional points to the score of this frame by adding the total points scored in the **first** attempt of the next frame.
+```
+
+User Story 6:
+```
+As a player,
+So I can calculate the correct score when I achieve a strike,
+I would like to add additional points to the score of this frame, by adding the total points socre in **both** attempts of the next frame.
+```
+
+User Story 7:
+```
+As a player,
+So I can continue to play a game of bowling if I haven't achieved a strike,
+I would like to be able to receive a second attempt within the same frame
+```
+
+User Story 8:
+```
+As a bowler, 
+So I can calculate the score correctly in the tenth and final frame
+I would like to add the points scored in the third attempt to my total score.
+```
+User Story 9
+```
+As a bowler,
+So I can celebrate or drown my sorrows,
+I would like to add the total numnber of points scored out of 300 across the ten frames and have them returned to me
+```
 
 * Challenge time: rest of the day and weekend.
 * Feel free to use google, your notes, books, etc. but work on your own
