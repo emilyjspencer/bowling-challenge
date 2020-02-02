@@ -39,6 +39,14 @@ describe('ScoreCard', function(){
       it('spare - the current score is 10 if the player scores 5 in roll1 and 5 in roll2', function() {
         expect(scoreCard.roll(5,5)).toEqual(10)
       })
+
+      it('the second roll isnt saved if the total for the two pins adds up to more than 10', function(){
+        expect(scoreCard.roll(7, 8)).toEqual(7)
+      })
+
+      it('only the scores for the first 2 rolls in a frame are saved', function(){
+        expect(scoreCard.roll(6, 2, 8, 5)).toEqual(8);
+      })
     })
 
     describe('cumulative score', function() {
@@ -50,20 +58,6 @@ describe('ScoreCard', function(){
         expect(scoreCard.seeCumulativeScore()).toEqual(24)
       })
     })
-
-      it('the second roll isnt saved if the total for the two pins adds up to more than 10', function(){
-       expect(scoreCard.roll(7, 8)).toEqual(7)
-      })
-  
-      //it('only the scores for the first 2 rolls in a frame are saved', function(){
-        //scoreCard.roll(6);
-        //scoreCard.roll(2);
-        //scoreCard.roll(8);
-        //scoreCard.roll(5);
-        //expect(scoreCard.seeScores()).toEqual([6,2]);
-      //})
-  
-
 })
 
 

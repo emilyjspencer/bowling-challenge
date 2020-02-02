@@ -38,7 +38,7 @@ function ScoreCard() {
        }
     }
 
-    ScoreCard.prototype.seeCumulativeScore = function() { /
+    ScoreCard.prototype.seeCumulativeScore = function() { 
       let total = this.scores.reduce((a, b) => a + b, 0) 
       return total;
     }
