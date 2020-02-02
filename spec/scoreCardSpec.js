@@ -40,6 +40,11 @@ describe('ScoreCard', function(){
         expect(scoreCard.roll(5,5)).toEqual(10)
       })
 
+      it('strike - if first roll is 10 and second roll is five the total score for that frame is 10', function() {
+        expect(scoreCard.roll(10, 5)).toEqual(10)
+      })
+    })
+
       it('the second roll isnt saved if the total for the two pins adds up to more than 10', function(){
         expect(scoreCard.roll(7, 8)).toEqual(7)
       })
@@ -58,6 +63,8 @@ describe('ScoreCard', function(){
         expect(scoreCard.seeCumulativeScore()).toEqual(24)
       })
     })
+
+   
 })
 
 
