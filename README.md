@@ -82,16 +82,21 @@ I would like to be able to receive a second attempt within the same frame
 
 User Story 8:
 ```
-As a bowler, 
+As a player, 
 So I can calculate the score correctly in the tenth and final frame
 I would like to add the points scored in the third attempt to my total score.
 ```
 User Story 9
 ```
-As a bowler,
+As a player,
 So I can celebrate or drown my sorrows,
 I would like to add the total number of points scored out of 300 across the ten frames and have them returned to me
 ```
+
+STATUS UPDATE
+
+A work in progress - need to add the logic for strikes and spares 
+
 
 * Challenge time: rest of the day and weekend.
 * Feel free to use google, your notes, books, etc. but work on your own
