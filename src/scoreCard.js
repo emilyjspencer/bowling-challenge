@@ -10,6 +10,7 @@ function ScoreCard() {
     //this.frameNumber = 0 // 0 as no rolls have been made
     //this.frameRollNumber = 0 // - as player hasn't started frame yet
       this.frames = [];
+      this.frameCount = 0
       this.currentScore = 0;
     }
     
@@ -17,8 +18,12 @@ function ScoreCard() {
       return this.currentScore;
     }
 
-    ScoreCard.prototype.getFrames =function() {
+    ScoreCard.prototype.getFrames = function() {
       return this.frames;
+    }
+
+    ScoreCard.prototype.getFrameCount = function() {
+      return this.frameCount;
     }
     
    
