@@ -13,6 +13,10 @@ describe('ScoreCard', function(){
       it('the current score is zero before any rolls have been made', function(){
         expect(scoreCard.getCurrentScore()).toEqual(0)
       })
+
+      it('the frames array is empty at the start of the game', function(){
+        expect(scoreCard.getFrames()).toEqual([])
+      })
     })
 
   

@@ -16,5 +16,9 @@ function ScoreCard() {
     ScoreCard.prototype.getCurrentScore = function() {
       return this.currentScore;
     }
+
+    ScoreCard.prototype.getFrames =function() {
+      return this.frames;
+    }
     
    
