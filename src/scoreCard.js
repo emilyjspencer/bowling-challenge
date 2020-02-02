@@ -7,35 +7,45 @@ function ScoreCard() {
     //this.scoreSoFar = []; // score so far
      this.isStrike = false // returns true or false but on initialization is false
      this.isSpare = false // returns true of false but on initialization - is false
-    //this.frameNumber = 0 // 0 as no rolls have been made
-    //this.frameRollNumber = 0 // - as player hasn't started frame yet
       this.isGutterGame = false
-      this.frames = [];
-      this.frameCount = 0
-      this.currentScoreForFrame = 0;
+      //this.frameCount = 0
+      this.scoreForCurrentFrame = 0;
       this.cumulativeScore = 0;
+      this.rollCount = 0;
+      this.frameCount = 0
+      this.scores = [];
     }
     
-    ScoreCard.prototype.getCurrentScoreForFrame = function() {
-      return this.currentScoreForFrame;
+    ScoreCard.prototype.seeScoreForCurrentFrame = function() {
+      return this.scoreForCurrentFrame;
     }
 
-    ScoreCard.prototype.getFrames = function() {
-      return this.frames;
+    ScoreCard.prototype.seeScores = function() {
+      return this.scores;
     }
 
-    ScoreCard.prototype.getFrameCount = function() {
+    ScoreCard.prototype.seeFrameCount = function() {
       return this.frameCount;
     }
 
-    ScoreCard.prototype.getCumulativeScore = function() {
+    ScoreCard.prototype.roll = function(roll1, roll2) {
+      this.frameCount += 1 // increase frameCount by 1 for each frame - two rolls
+       let rolls =  roll1 + roll2
+       this.scores.push(rolls) // push the total score for the two rolls into the array
+       return rolls // return the total of the two rolls 
+    }
+
+    ScoreCard.prototype.seeCumulativeScore = function() {
+      // loop through the cumulative score array
+      //for(var i = 0; i < this.frames.length; i++)
+      //scores = this.scores.reduce((a, b) => a + b, 0) // scores is the result of adding all of the numbers in the array 
       return this.cumulativeScore;
     }
+
+  
     
-    ScoreCard.prototype.roll = function(roll1, roll2) {
-       rolls =  roll1 + roll2
-       return rolls
-    }
+
+  
 
    
    

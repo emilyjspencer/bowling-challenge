@@ -2,7 +2,7 @@
 
 describe('ScoreCard', function(){
 
-  var scoreCard;
+  let scoreCard;
 
   beforeEach(function(){
     scoreCard = new ScoreCard();
@@ -10,19 +10,19 @@ describe('ScoreCard', function(){
 
     describe('frame zero', function(){
       it('the current score is zero before any rolls have been made', function(){
-        expect(scoreCard.getCurrentScoreForFrame()).toEqual(0) 
+        expect(scoreCard.seeScoreForCurrentFrame()).toEqual(0) 
       })
 
-      it('the frames array is empty at the start of the game', function(){
-        expect(scoreCard.getFrames()).toEqual([]) 
+      it('the scores array is empty at the start of the game', function(){
+        expect(scoreCard.seeScores()).toEqual([]) 
       })
 
       it('the frameCount is zero before any rolls have been made', function() {
-        expect(scoreCard.getFrameCount()).toEqual(0) 
+        expect(scoreCard.seeFrameCount()).toEqual(0) 
       })
 
-      it('the score so far is zero before any rolls have been made', function() {
-        expect(scoreCard.getCumulativeScore()).toEqual(0)
+      it('the cumulative score is zero before any rolls have been made', function() {
+        expect(scoreCard.seeCumulativeScore()).toEqual(0)
       })
     })
 
@@ -40,9 +40,24 @@ describe('ScoreCard', function(){
         expect(scoreCard.roll(5,5)).toEqual(10)
       })
 
+      //it('the second roll isnt saved if the total for the two pins comes to more than 10', function(){
+       // scoreCard.roll(7);
+        //scoreCard.roll(8);
+        ////})
+  
+      //it('only the scores for the first 2 rolls in a frame are saved', function(){
+        //scoreCard.roll(6);
+        //scoreCard.roll(2);
+        //scoreCard.roll(8);
+        //scoreCard.roll(5);
+        //expect(scoreCard.seeScores()).toEqual([6,2]);
+      //})
     })
+  
 
-  })
+
+
+})
 
 
 
