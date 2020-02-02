@@ -8,7 +8,7 @@ describe('ScoreCard', function(){
     scoreCard = new ScoreCard();
   })
 
-    describe('frame zero', function(){
+    describe('initialization', function(){
       it('the current score is zero before any rolls have been made', function(){
         expect(scoreCard.seeScoreForCurrentFrame()).toEqual(0) 
       })
@@ -51,10 +51,9 @@ describe('ScoreCard', function(){
       })
     })
 
-      //it('the second roll isnt saved if the total for the two pins comes to more than 10', function(){
-       // scoreCard.roll(7);
-        //scoreCard.roll(8);
-        ////})
+      it('the second roll isnt saved if the total for the two pins adds up to more than 10', function(){
+       expect(scoreCard.roll(7, 8)).toEqual(7)
+      })
   
       //it('only the scores for the first 2 rolls in a frame are saved', function(){
         //scoreCard.roll(6);

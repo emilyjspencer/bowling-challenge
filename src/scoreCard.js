@@ -1,46 +1,51 @@
 'use strict;'
 
 function ScoreCard() {
-
-    //this.inPlay = false; // is the game in play - true or false - upon initialization - not in game - not playing
-    ////this.frameRollCount = []; // tracks whether the player is on their first or second roll of a frame 
-    //this.scoreSoFar = []; // score so far
-     this.isStrike = false // returns true or false but on initialization is false
-     this.isSpare = false // returns true of false but on initialization - is false
-      this.isGutterGame = false
-      //this.frameCount = 0
-      this.scoreForCurrentFrame = 0;
-      this.cumulativeScore = 0;
-      this.rollCount = 0;
-      this.frameCount = 0
-      this.scores = [];
+     this.isStrike = false
+     this.isSpare = false
+     this.isGutterGame = false
+     this.scoreForCurrentFrame = 0;
+     this.cumulativeScore = 0;
+     this.rollCount = 0;
+     this.frameCount = 0
+     this.scores = [];
     }
     
-    ScoreCard.prototype.seeScoreForCurrentFrame = function() {
+     ScoreCard.prototype.seeScoreForCurrentFrame = function() { // see the total for specific frame
       return this.scoreForCurrentFrame; // currently not doing anything 
+  
     }
 
-    ScoreCard.prototype.seeScores = function() {
+    ScoreCard.prototype.seeScores = function() { 
       return this.scores;
     }
 
     ScoreCard.prototype.seeFrameCount = function() {
-      return this.frameCount;
+      return this.scores.length;
     }
 
-    ScoreCard.prototype.roll = function(roll1, roll2) {
-      this.frameCount += 1 // increase frameCount by 1 for each frame - two rolls
+    ScoreCard.prototype.roll = function(roll1, roll2) { 
+      this.frameCount += 1 
        let rolls =  roll1 + roll2
-       this.scores.push(rolls) // push the total score for the two rolls into the array
-       return rolls // return the total of the two rolls 
+       if (rolls <= 10) {
+         this.scores.push(rolls) 
+         this.scoreForCurrentFrame += rolls
+         return rolls 
+       } else {
+         this.scores.push(roll1)
+         this.scoreForCurrentFrame += roll1
+         return roll1
+       }
     }
 
-    ScoreCard.prototype.seeCumulativeScore = function() {
-      // loop through the cumulative score array
-      //for(var i = 0; i < this.frames.length; i++)
-      let total = this.scores.reduce((a, b) => a + b, 0) // scores is the result of adding all of the numbers in the array 
+    ScoreCard.prototype.seeCumulativeScore = function() { /
+      let total = this.scores.reduce((a, b) => a + b, 0) 
       return total;
     }
+
+    
+
+   
 
   
     
