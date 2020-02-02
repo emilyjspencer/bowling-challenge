@@ -17,7 +17,7 @@ function ScoreCard() {
     }
     
     ScoreCard.prototype.seeScoreForCurrentFrame = function() {
-      return this.scoreForCurrentFrame;
+      return this.scoreForCurrentFrame; // currently not doing anything 
     }
 
     ScoreCard.prototype.seeScores = function() {
@@ -38,8 +38,8 @@ function ScoreCard() {
     ScoreCard.prototype.seeCumulativeScore = function() {
       // loop through the cumulative score array
       //for(var i = 0; i < this.frames.length; i++)
-      //scores = this.scores.reduce((a, b) => a + b, 0) // scores is the result of adding all of the numbers in the array 
-      return this.cumulativeScore;
+      let total = this.scores.reduce((a, b) => a + b, 0) // scores is the result of adding all of the numbers in the array 
+      return total;
     }
 
   
