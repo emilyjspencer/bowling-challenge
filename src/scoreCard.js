@@ -12,6 +12,7 @@ function ScoreCard() {
       this.frames = [];
       this.frameCount = 0
       this.currentScore = 0;
+      this.scoreSoFar = 0;
     }
     
     ScoreCard.prototype.getCurrentScore = function() {
@@ -25,5 +26,8 @@ function ScoreCard() {
     ScoreCard.prototype.getFrameCount = function() {
       return this.frameCount;
     }
-    
+
+    ScoreCard.prototype.getScoreSoFar = function() {
+      return this.scoreSoFar;
+    }    
    
