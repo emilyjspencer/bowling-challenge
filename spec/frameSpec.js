@@ -39,6 +39,11 @@ describe('Frame', function(){
         expect(frame.roll(2,5)).toEqual(7)
       })
 
+      it('adds frame to frames array when player has rolled twice', function(){
+        frame.roll(3, 5)
+        expect(frame.frames.length).toEqual(1)
+      })
+
       describe('player scores a spare', function () {
         it('the current score is 10 if the player scores 5 in roll1 and 5 in roll2', function() {
           expect(frame.roll(5,5)).toEqual(10)
@@ -91,7 +96,14 @@ describe('Frame', function(){
       })
     })
 
-  })
+    //describe('spare', function() {
+      //describe('results in bonus points added to previous frame', function() {
+        //it('adds bonus points to the previous frame if previous frame was a spare')
+          
+    
+
+    //})
+})
   
 })
    
