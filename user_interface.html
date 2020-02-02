@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <title>Bowling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type='text/css' href="scorecard.css">
+    <script src="Frame.js"></script>
+</head>
+
+
+<body>
+  <div>
+      <button type="button" onclick="addScore(0)" class="btn btn-light btn-0">🌟0🌟</button>
+      <button type="button" onclick="addScore(1)" class="btn btn-light btn-1">🌟1🌟</button>
+      <button type="button" onclick="addScore(2)" class="btn btn-light btn-2">🌟2🌟</button>
+      <button type="button" onclick="addScore(3)" class="btn btn-light btn-3">🌟3🌟</button>
+      <button type="button" onclick="addScore(4)" class="btn btn-light btn-4">🌟4🌟</button>
+      <button type="button" onclick="addScore(5)" class="btn btn-light btn-5">🌟5🌟</button>
+      <button type="button" onclick="addScore(6)" class="btn btn-light btn-6">🌟6🌟</button>
+      <button type="button" onclick="addScore(7)" class="btn btn-light btn-7">🌟7🌟</button>
+      <button type="button" onclick="addScore(8)" class="btn btn-light btn-8">🌟8🌟</button>
+      <button type="button" onclick="addScore(9)" class="btn btn-light btn-9">🌟9🌟</button>
+      <button type="button" onclick="addScore(10)" class="btn btn-light btn-10">🌟10🌟</button>
+  </div>
+    <table class="table" id="scores">
+      <thead>
+        <tr>
+          <th scope="col">Frame</th>
+          <th scope="col">Roll 1 Score</th>
+          <th scope="col">Roll 2 Score</th>
+          <th scope="col">Total Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td id="frame11" class="frame1-roll-1-score"></td>
+          <td id="frame12" class="frame1-roll-2-score"></td>
+          <td id="total1" class="frame1-total-score"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="frame21" class="frame2-roll-1-score"></td>
+            <td id="frame22" class="frame2-roll-2-score"></td>
+            <td id="total2" class="frame2-total-score"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="frame31" class="frame3-roll-1-score"></td>
+            <td id="frame32" class="frame3-roll-2-score"></td>
+            <td id="total3" class="frame3-total-score"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="frame41" class="frame4-roll-1-score"></td>
+            <td id="frame42" class="frame4-roll-2-score"></td>
+            <td id="total4" class="frame4-total-score"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="frame51" class="frame5-roll-1-score"></td>
+            <td id="frame52" class="frame5-roll-2-score"></td>
+            <td id="total5" class="frame5-total-score"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="frame61" class="frame6-roll-1-score"></td>
+            <td id="frame62" class="frame6-roll-2-score"></td>
+            <td id="total6" class="frame6-total-score"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="frame71" class="frame7-roll-1-score"></td>
+            <td id="frame72" class="frame7-roll-2-score"></td>
+            <td id="total7" class="frame7-total-score"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="frame81" class="frame8-roll-1-score"></td>
+            <td id="frame82" class="frame8-roll-2-score"></td>
+            <td id="total8" class="frame8-total-score"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="frame91" class="frame9-roll-1-score"></td>
+            <td id="frame92" class="frame9-roll-2-score"></td>
+            <td id="total9" class="frame9-total-score"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="frame101" class="frame10-roll-1-score"></td>
+            <td id="frame102" class="frame10-roll-2-score"></td>
+            <td id="total10" class="frame10-total-score"></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</body>
