@@ -17,6 +17,10 @@ describe('Frame', function(){
         expect(frame.seeScores()).toEqual([]) 
       })
 
+      it('the rollCount is zero before any rolls have been made', function() {
+        expect(frame.seeRollCount()).toEqual(0)
+      })
+
       it('the frameCount is zero before any rolls have been made', function() {
         expect(frame.seeFrameCount()).toEqual(0) 
       })
@@ -66,15 +70,15 @@ describe('Frame', function(){
     })//
 
 
-      describe('correctFrameLength', function() {
-        it('scores array returns false is its length is more than two', function () {
-          frame.roll(7);
-          frame.roll(4);
-          frame.roll(2);
-          frame.scores.length = 3;
-          expect(frame.correctFrameLength()).toBe(false);
-        })
-      })
+      //describe('correctFrameLength', function() {
+        //it('scores array returns false is its length is more than two', function () {
+          //frame.roll(7);
+          //frame.roll(4);
+          //frame.roll(2);
+          //frame.scores.length = 3;
+         // expect(frame.correctFrameLength()).toBe(false);
+       // })
+     // })
 
 
     describe('cumulative score', function() {

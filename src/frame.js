@@ -19,6 +19,10 @@ function Frame() {
       return this.scores.length;
     }
 
+    Frame.prototype.seeRollCount = function() {
+      return this.rollCount;
+    }
+    
     Frame.prototype.roll = function(roll1, roll2) { 
       this.frameCount += 1 
        let rolls =  roll1 + roll2
